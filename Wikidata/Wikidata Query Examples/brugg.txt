@@ -1,0 +1,8 @@
+# I created this query to learn the humans who were born in Brugg where I was born.
+select distinct ?item ?itemLabel ?itemDescription ?sitelinks where {
+    ?item wdt:P31 wd:Q5;
+          wdt:P19 wd:Q64099;
+             wikibase:sitelinks ?sitelinks.  
+    SERVICE wikibase:label { bd:serviceParam wikibase:language "en" }
+}
+ORDER BY DESC(?itemDescription)

@@ -1,0 +1,9 @@
+# I created this query to display the paintings of Claude Monet.
+#defaultView:ImageGrid
+SELECT *
+WHERE
+{
+  ?item wdt:P31 wd:Q3305213;
+        wdt:P170 wd:Q296;
+        wdt:P18 ?pic.
+}
